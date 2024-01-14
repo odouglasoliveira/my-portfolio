@@ -13,6 +13,28 @@
 body {
   height: 100vh;
   color: black;
-  background-color: #c3cbdc;
-  background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+  background-color: #edf1f4;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1F2421;
+  transition: width 0.5s ease, left 0.5s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+  left: 0;
 }
