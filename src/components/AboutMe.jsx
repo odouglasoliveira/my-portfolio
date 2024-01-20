@@ -1,4 +1,7 @@
+import process from "node:process"
+
 export default function AboutMe() {
+  console.log(process.env(TESTE_KEY))
   return (
     <>
       <section className="w-100 px-36">
