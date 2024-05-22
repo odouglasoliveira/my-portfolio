@@ -1,15 +1,58 @@
-export default function Header() {
+import { Link } from 'react-scroll';
+
+const Header = () => {
   return (
-    <header className="flex align-middle justify-between p-4 px-12 flex-wrap">
-      <section className="flex-col justify-center align-middle min-h-full">
-        <p className="self-center text-2xl font-semibold">Douglas Oliveira</p>
-        <p className="self-center text-sm font-semibold text-gray-700">Desenvolvedor Fullstack</p>
-      </section>
-      <section className="flex align-middle justify-center gap-4 flex-wrap">
-        <a className="self-center font-semibold link" target="_blank" href="https://www.linkedin.com/in/douglasoliveiradev/" rel="noreferrer">Linkedin</a>
-        <a className="self-center font-semibold link" target="_blank" href="https://github.com/odouglasoliveira" rel="noreferrer">Github</a>
-        <a className="self-center font-semibold link" target="_blank" href="mailto:odouglasoliveira.dev@gmail.com" rel="noreferrer">Email</a>
-      </section>
+    <header className="bg-purple-700 py-6">
+      <nav className="container mx-auto flex justify-between items-center px-6">
+        <ul className="flex space-x-4">
+          <li>
+            <Link 
+              to="home" 
+              smooth={true} 
+              duration={800} 
+              className="text-white py-2 px-4 rounded hover:bg-purple-500 transition cursor-pointer"
+            >
+              Início
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="about" 
+              smooth={true} 
+              duration={800} 
+              className="text-white py-2 px-4 rounded hover:bg-purple-500 transition cursor-pointer"
+            >
+              Sobre
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="projects" 
+              smooth={true} 
+              duration={800} 
+              className="text-white py-2 px-4 rounded hover:bg-purple-500 transition cursor-pointer"
+            >
+              Projetos
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="contact" 
+              smooth={true} 
+              duration={800} 
+              className="text-white py-2 px-4 rounded hover:bg-purple-500 transition cursor-pointer"
+            >
+              Contato
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="text-center mt-10" id="home">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Bem-vindo ao meu Portfólio 🚀</h1>
+        <p className="text-xl md:text-2xl mt-4">Desenvolvedor Front-End 💻</p>
+      </div>
     </header>
-  )
+  );
 }
+
+export default Header;
