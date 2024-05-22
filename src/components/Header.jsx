@@ -10,7 +10,7 @@ const Header = () => {
               to="home" 
               smooth={true} 
               duration={800} 
-              className="text-white py-2 px-4 rounded hover:bg-purple-500 transition cursor-pointer"
+              className="text-white py-2 px-4 rounded hover:bg-purple-900 transition cursor-pointer"
             >
               Início
             </Link>
@@ -20,7 +20,7 @@ const Header = () => {
               to="about" 
               smooth={true} 
               duration={800} 
-              className="text-white py-2 px-4 rounded hover:bg-purple-500 transition cursor-pointer"
+              className="text-white py-2 px-4 rounded hover:bg-purple-900 transition cursor-pointer"
             >
               Sobre
             </Link>
@@ -30,7 +30,7 @@ const Header = () => {
               to="projects" 
               smooth={true} 
               duration={800} 
-              className="text-white py-2 px-4 rounded hover:bg-purple-500 transition cursor-pointer"
+              className="text-white py-2 px-4 rounded hover:bg-purple-900 transition cursor-pointer"
             >
               Projetos
             </Link>
@@ -40,7 +40,7 @@ const Header = () => {
               to="contact" 
               smooth={true} 
               duration={800} 
-              className="text-white py-2 px-4 rounded hover:bg-purple-500 transition cursor-pointer"
+              className="text-white py-2 px-4 rounded hover:bg-purple-900 transition cursor-pointer"
             >
               Contato
             </Link>
@@ -48,7 +48,7 @@ const Header = () => {
         </ul>
       </nav>
       <div className="text-center mt-10" id="home">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Bem-vindo ao meu Portfólio 🚀</h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Douglas Oliveira.</h1>
         <p className="text-xl md:text-2xl mt-4">Desenvolvedor Front-End 💻</p>
       </div>
     </header>
