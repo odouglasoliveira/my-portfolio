@@ -1,7 +1,14 @@
 import { Element } from 'react-scroll';
 import emailJs from '@emailjs/browser';
+import Joi from 'joi';
 
 const Contact = () => {
+    const schema = Joi.object({
+        name: Joi.string().min(4).max(50).required(),
+        email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net', 'br'] } }).required(),
+        message: Joi.string().required().min(10),
+    })
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const name = e.target.elements.name.value;
@@ -13,7 +20,8 @@ const Contact = () => {
           email: email,
         }
         try {
-          emailJs.send('service_yno3x09', 'template_uuwmnbe', templateParams, 'R-UO_aQY1P-l5ZiHR').then((response) => console.log('E-mail enviado:', response))
+            await schema.validateAsync({name, email, message})
+            emailJs.send('service_yno3x09', 'template_uuwmnbe', templateParams, 'R-UO_aQY1P-l5ZiHR').then((response) => console.log('E-mail enviado:', response))
         } catch (error) {
             console.error('Erro ao enviar e-mail:', error);
         }
@@ -30,8 +38,8 @@ const Contact = () => {
                             type="text"
                             id="name"
                             name="name"
+                            placeholder="Digite pelo menos 4 letras"
                             className="p-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:caret-purple-500"
-                            required
                             autoComplete='off'
                         />
 
@@ -40,8 +48,8 @@ const Contact = () => {
                             type="email"
                             id="email"
                             name="email"
+                            placeholder="exemplo@email.com"
                             className="p-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:caret-purple-500"
-                            required
                             autoComplete='off'
                         />
 
@@ -49,14 +57,14 @@ const Contact = () => {
                         <textarea
                             id="message"
                             name="message"
+                            placeholder="Digite sua mensagem aqui."
                             className="p-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:caret-purple-500"
-                            required
                             autoComplete='off'
                         ></textarea>
 
                         <button
                             type="submit"
-                            className="bg-purple-700 hover:bg-purple-500 text-white py-2 px-4 rounded transition"
+                            className="bg-purple-700 hover:bg-purple-600 active:bg-purple-900 text-white py-2 px-4 rounded transition"
                         >
                             Enviar
                         </button>
