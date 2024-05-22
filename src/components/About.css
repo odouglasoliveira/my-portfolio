@@ -1,0 +1,10 @@
+.fade-in-horizontal {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transform: translateX(-20px);
+}
+
+.fadeInHorizontal {
+  opacity: 1;
+  transform: translateX(0);
+}
