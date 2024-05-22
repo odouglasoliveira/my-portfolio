@@ -1,5 +1,5 @@
 import { Element } from 'react-scroll';
-import axios from 'axios';
+import emailJs from '@emailjs/browser';
 
 const Contact = () => {
     const handleSubmit = async (e) => {
@@ -7,31 +7,13 @@ const Contact = () => {
         const name = e.target.elements.name.value;
         const email = e.target.elements.email.value;
         const message = e.target.elements.message.value;
-
+        const templateParams = {
+          from_name: name,
+          message: message,
+          email: email,
+        }
         try {
-            const response = await axios.post('https://api.sendgrid.com/v3/mail/send', {
-                personalizations: [
-                    {
-                        to: [{ email: 'odouglasoliveira.dev@gmail.com' }],
-                        subject: 'Mensagem do seu portfólio'
-                    }
-                ],
-                from: { email: email },
-                content: [
-                    {
-                        type: 'text/plain',
-                        value: `Nome: ${name}\nEmail: ${email}\nMensagem: ${message}`
-                    }
-                ]
-            }, {
-                headers: {
-                    // eslint-disable-next-line no-undef
-                    'Authorization': `Bearer ${process.env.SENDGRID_API_KEY}`, // Substitua pelo sua chave de API do SendGrid
-                    'Content-Type': 'application/json'
-                }
-            });
-
-            console.log('E-mail enviado:', response);
+          emailJs.send('service_yno3x09', 'template_uuwmnbe', templateParams, 'R-UO_aQY1P-l5ZiHR').then((response) => console.log('E-mail enviado:', response))
         } catch (error) {
             console.error('Erro ao enviar e-mail:', error);
         }
