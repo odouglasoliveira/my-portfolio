@@ -44,7 +44,7 @@ const About = () => {
             <div className="flex items-center justify-center gap-12 fade-in-horizontal">
               <img src={Image1} alt="" className="w-1/3 h-auto mr-8 rounded-2xl" />
               <p className="text-3xl font-bold w-1/3">
-                Me chamo Douglas Oliveira e sou um desenvolvedor web full-stack formado pela Trybe. Tenho um grande interesse na área de frontend e UX.
+                Me chamo Douglas Oliveira e sou um desenvolvedor web full-stack formado pela Trybe.
               </p>
             </div>
             <div className="flex items-center justify-center gap-12 fade-in-horizontal">

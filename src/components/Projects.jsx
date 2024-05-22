@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "Trybe Tunes",
     description: "Um projeto simulando uma SPA de músicas. Onde é possível pesquisar, ouvir e favoritar prévias de músicas. Construida usando a API do iTunes.",
-    image: TrybeTunesImage // Substitua por URLs reais
+    image: TrybeTunesImage
   }
 ];
 
