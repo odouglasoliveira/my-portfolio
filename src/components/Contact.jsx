@@ -31,15 +31,15 @@ const Contact = () => {
         <Element name="contact">
             <section className="py-20 px-6">
                 <div className="container mx-auto">
-                    <h2 className="text-3xl text-purple-500 mb-4">Contato 📞</h2>
+                    <h2 className="text-3xl text-[#F5CB5C] mb-4">Contato 📞</h2>
                     <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
                         <label htmlFor="name" className="text-gray-400">Nome:</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
-                            placeholder="Digite pelo menos 4 letras"
-                            className="p-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:caret-purple-500"
+                            placeholder="Digite seu nome"
+                            className="p-2 rounded bg-[#333533] text-white focus:outline-none focus:ring-2 focus:ring-[#F5CB5C] focus:caret-[#F5CB5C]"
                             autoComplete='off'
                         />
 
@@ -49,7 +49,7 @@ const Contact = () => {
                             id="email"
                             name="email"
                             placeholder="exemplo@email.com"
-                            className="p-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:caret-purple-500"
+                            className="p-2 rounded bg-[#333533] text-white focus:outline-none focus:ring-2 focus:ring-[#F5CB5C] focus:caret-[#F5CB5C]"
                             autoComplete='off'
                         />
 
@@ -58,13 +58,13 @@ const Contact = () => {
                             id="message"
                             name="message"
                             placeholder="Digite sua mensagem aqui."
-                            className="p-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:caret-purple-500"
+                            className="p-2 rounded bg-[#333533] text-white focus:outline-none focus:ring-2 focus:ring-[#F5CB5C] focus:caret-[#F5CB5C]"
                             autoComplete='off'
                         ></textarea>
 
                         <button
                             type="submit"
-                            className="bg-purple-700 hover:bg-purple-600 active:bg-purple-900 text-white py-2 px-4 rounded transition"
+                            className="bg-[#F2BD2C] hover:bg-[#F5CB5C] active:bg-[#D39E0D] text-[#242423] py-2 px-4 rounded transition"
                         >
                             Enviar
                         </button>
