@@ -19,7 +19,7 @@ const Projects = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map(project => (
               <div key={project.id} className="bg-[#333533] p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
-                <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded-md mb-4" />
+                <img loading='lazy' src={project.image} alt={project.title} className="w-full h-48 object-cover rounded-md mb-4" />
                 <h3 className="text-2xl text-[#F5CB5C] mb-2">{project.title}</h3>
                 <p className="text-[#E8EDDF]">{project.description}</p>
               </div>
