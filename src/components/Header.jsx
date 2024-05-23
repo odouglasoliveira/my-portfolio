@@ -46,6 +46,11 @@ const Header = () => {
             </Link>
           </li>
         </ul>
+        <ul className="flex space-x-4">
+          <li className="text-white py-2 px-4 rounded hover:bg-purple-900 transition cursor-pointer">
+            <a href="https://www.linkedin.com/in/douglasoliveiradev/" target='_blank' rel="noreferrer">LinkedIn</a>
+          </li>
+        </ul>
       </nav>
       <div className="text-center mt-10" id="home">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Douglas Oliveira.</h1>
