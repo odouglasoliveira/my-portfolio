@@ -1,8 +1,18 @@
 import { Link } from 'react-scroll';
+import ScrollReveal from 'scrollreveal';
+import { useEffect } from 'react';
+import './Scroll.css';
+
+
 
 const Header = () => {
+  
+  useEffect(() => {
+    ScrollReveal({ reset: false, distance: '400px' }).reveal('.scroll-header', { duration: 2000, origin: 'top', easing: 'ease'})
+  }, [])
+
   return (
-    <header className="bg-[#CFDBD5] py-6">
+    <header className="bg-[#CFDBD5] scroll-header py-6">
       <nav className="container mx-auto flex justify-between items-center px-6 max-md:hidden">
         <ul className="flex space-x-4 max-md:flex-col">
           <li>
